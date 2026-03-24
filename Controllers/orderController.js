@@ -1,6 +1,6 @@
 import Order from '../Models/Order.js';
 import Customer from '../Models/Customer.js';
-import { sendOrderStatusEmail } from '../utils/sendEmail.js';
+import { sendOrderStatusEmail } from '../Utils/sendEmail.js';
 
 export const updateOrderBranch = async (req, res) => {
     try {
