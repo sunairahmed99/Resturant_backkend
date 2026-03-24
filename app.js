@@ -31,6 +31,9 @@ import couponRoutes from './Routes/couponRoutes.js';
 
 const app = express();
 
+// Trust Vercel's proxy for express-rate-limit
+app.set('trust proxy', 1);
+
 // --- Production Middlewares ---
 app.use(helmet());
 app.use(compression());
