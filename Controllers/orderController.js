@@ -130,7 +130,7 @@ export const getOrdersByPhone = async (req, res) => {
     try {
         const { phone } = req.params;
         const customer = await Customer.findOne({ phone });
-        
+
         if (!customer) {
             return res.status(200).json({
                 success: true,
