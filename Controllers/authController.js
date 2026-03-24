@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
 import Admin from '../Models/Admin.js';
-import sendEmail from '../utils/email.js';
+import sendEmail from '../Utils/email.js';
 
 const signToken = (id) => {
     return jwt.sign({ id }, process.env.JWT_SECRET, {
