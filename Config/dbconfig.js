@@ -23,6 +23,7 @@ const connectDB = async () => {
         const conn = await mongoose.connect(DB, options);
 
 
+
         // Handle connection events
         mongoose.connection.on('error', err => {
             console.error(`\x1b[31m✘ MongoDB connection error: ${err}\x1b[0m`);

@@ -42,6 +42,7 @@ app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000,
     max: 100,
+    validate: { xForwardedForHeader: false },
     message: { status: 'error', message: 'Too many requests, please try again later.' }
 });
 app.use('/api/', limiter);
